@@ -1,0 +1,95 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint"
+  ],
+  "rules": {
+    "no-multi-spaces": "error",
+    "indent": [
+      1,
+      2
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "no-multiple-empty-lines": [
+      "error",
+      {
+        "max": 1,
+        "maxBOF": 0,
+        "maxEOF": 0
+      }
+    ]
+  },
+  "overrides": [
+    // Webpack config file
+    {
+      "files": [
+        "./webpack/**",
+        "./webpack.config.js"
+      ],
+      "env": {
+        "node": true
+      }
+    },
+    // Javascript Files
+    {
+      "files": [
+        "./src/**/*.js",
+        "./src/**/*.jsx"
+      ],
+      "extends": [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime"
+      ]
+    },
+    // Typescript Files
+    {
+      "files": [
+        "./src/**/*.ts",
+        "./src/**/*.tsx"
+      ],
+      "extends": [
+        "plugin:react/recommended",
+        "plugin:react/jsx-runtime",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:@typescript-eslint/recommended-requiring-type-checking"
+      ],
+      "parserOptions": {
+        "project": [
+          "./tsconfig.json"
+        ]
+      },
+      "parser": "@typescript-eslint/parser",
+      "rules": {
+        "@typescript-eslint/restrict-template-expressions": [
+          "error",
+          {
+            "allowNumber": true,
+            "allowNullish": true
+          }
+        ]
+      }
+    }
+  ]
+}

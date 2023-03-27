@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "base-react-parcel"
+		},
+		{
+			"path": "base-react-roller"
+		},
+		{
+			"path": "base-react-ts-webpack"
+		}
+	],
+	"settings": {}
+}

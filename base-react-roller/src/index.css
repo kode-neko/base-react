@@ -1,0 +1,8 @@
+body {
+  background: Indigo;
+  background: linear-gradient(120deg, Black 0%, Indigo 100%);
+  padding: 1vw;
+  font-size: 3.5vh;
+  text-align: justify;
+  min-height: 100vh;
+}

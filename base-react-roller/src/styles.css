@@ -1,0 +1,12 @@
+.card {
+  color: GhostWhite;
+  font-family: Arial, sans-serif;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.polaroid {
+  border: 8px solid black;
+}
